@@ -11,62 +11,75 @@ body {
 	display: flex;
 	justify-content: center;
 	background-color: #ffffff;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.3), inset 0 -3px 3px rgba(0,0,0,0.1);
-  border-bottom: solid #ccc 1px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), inset 0 -3px 3px rgba(0, 0, 0, 0.1);
+	border-bottom: solid #ccc 1px;
 	line-height: 63px;
 	overflow-x: hidden;
 }
+
 .headerinside {
 	width: 960px;
 	display: flex;
 	justify-content: space-between;
 }
+
 .headernav {
 	display: inline-block;
 	position: relative;
 	top: 10%;
 }
+
 .headerul {
 	display: flex;
 	justify-content: flex-end;
 }
+
 .headerli {
 	list-style-type: none;
 	padding: 10px;
 	font-size: 20px;
 	/* margin: 10px; */
 }
+
 .headerli a {
 	float: right;
 	text-decoration: none;
 	color: #c5d1d0;
 }
+
 .headerli:hover {
 	background-color: #4ba9a5;
-	color:white;
-}
-.middleli {
-	border-left: 1px solid rgb(228, 221, 221);
-	border-right: 1px solid rgb(228, 221, 221);;
+	color: white;
 }
 
-h1 {	
+.middleli {
+	border-left: 1px solid rgb(228, 221, 221);
+	border-right: 1px solid rgb(228, 221, 221);
+	;
+}
+
+h1 {
 	font-family: 'Permanent Marker', cursive;
 	color: #4ba9a5;
 	font-size: 20px;
 }
+
 p {
 	/* line-height: 1.5px; */
 	font-size: 20px;
 	color: #222;
 }
+
 section {
 	border-radius: 1px;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.3), inset 0 -3px 3px rgba(0,0,0,0.1);
-  border: solid #ccc 1px;
-	-webkit-background-clip: padding-box; /* for Safari */
-	background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3), inset 0 -3px 3px rgba(0, 0, 0, 0.1);
+	border: solid #ccc 1px;
+	-webkit-background-clip: padding-box;
+	/* for Safari */
+	background-clip: padding-box;
+	/* for IE9+, Firefox 4+, Opera, Chrome */
 }
+
 .nametab {
 	background-color: #4ba9a5;
 	color: white;
@@ -76,20 +89,24 @@ section {
 	display: inline-block;
 	text-align: center;
 }
+
 .myface {
-	width:200px;
-	height:220px;
+	width: 200px;
+	height: 220px;
 	float: left;
 	padding-right: 20px;
 }
+
 .contentinside {
 	overflow: auto;
-	min-height: 100%;
+	/* min-height: 100%; */
+	min-height: calc(100vh - 70px);
 	margin: auto;
 	margin-top: 40px;
 	margin-bottom: 40px;
-	width:	960px;
+	width: 960px;
 }
+
 .mainsection {
 	width: 608px;
 	float: left;
@@ -97,16 +114,19 @@ section {
 	padding: 20px;
 	margin-right: 40px;
 }
+
 .sidebar {
 	width: 228px;
 	float: right;
 	background-color: #ffffff;
 	padding: 20px;
 }
+
 .socialicon {
 	width: 70px;
 	height: 70px;
 }
+
 .clearfix::after {
 	content: "";
 	clear: both;
@@ -158,8 +178,8 @@ textarea {
 }
 
 footer {
-	position:absolute;
-	bottom:0;
+	position: absolute;
+	/* bottom: 0; */
 	width: 100%;
 	text-align: center;
 	background-color: #666666;
@@ -169,4 +189,85 @@ footer {
 	height: 63px;
 	border-top: 10px solid #4ba9a5;
 	line-height: 63px;
+}
+
+@media screen and (max-width:980px) {
+	.headerinside {
+		width: 940px;
+	}
+	.mainsection {
+		width: 588px;
+		padding: 20px;
+		margin-right: 40px;
+	}
+	.contentinside {
+		width: 940px;
+	}
+	.sidebar {
+		width: 208px;
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width:768px) {
+	.headerinside {
+		width: 740px;
+	}
+	.mainsection {
+		width: 388px;
+		padding: 10px;
+		padding-right: 20px;
+	}
+	.contentinside {
+		margin: 20px 0px 20px 10px;
+		width: 740px;
+	}
+	.sidebar {
+		width: 208px;
+		padding: 10px;
+		margin-right: 20px;
+	}
+	h1 {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width:640px) {
+	.mainheader{
+		position: static;
+	}
+	.headerinside {
+		width: 620px;
+	}
+	.mainsection {
+		width: 268px;
+		padding: 10px;
+		padding-right: 20px;
+	}
+	.contentinside {
+		overflow: auto;
+		min-height: 100%;
+		margin: auto;
+		/* margin-top: 20px;
+		margin-bottom: 20px; */
+		margin: 20px 0px 20px 10px;
+		width: 620px;
+	}
+	.sidebar {
+		width: 208px;
+		float: left;
+		background-color: #ffffff;
+		padding: 10px;
+		margin-right: 20px;
+	}
+	h1 {
+		font-family: 'Permanent Marker', cursive;
+		color: #4ba9a5;
+		font-size: 12px;
+	}
+	.individualimage {
+		width: 260px;
+		height: 170px;
+		margin: 10px 0px 10px 0px;
+	}
 }
